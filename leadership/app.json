@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "leadership",
+    "slug": "leadership",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "entryPoint": "./app/App.js",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.leadership"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.leadership"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+          {
+            "fonts": [
+              "./assets/fonts/Manrope-ExtraLight.ttf",
+              "./assets/fonts/Manrope-Light.ttf",
+              "./assets/fonts/Manrope-Regular.ttf",
+              "./assets/fonts/Manrope-Medium.ttf",
+              "./assets/fonts/Manrope-SemiBold.ttf",
+              "./assets/fonts/Manrope-Bold.ttf",
+              "./assets/fonts/Manrope-ExtraBold.ttf",
+
+              "./assets/fonts/LeagueSpartan-ExtraLight.ttf",
+              "./assets/fonts/LeagueSpartan-Light.ttf",
+              "./assets/fonts/LeagueSpartan-Regular.ttf",
+              "./assets/fonts/LeagueSpartan-Medium.ttf",
+              "./assets/fonts/LeagueSpartan-SemiBold.ttf",
+              "./assets/fonts/LeagueSpartan-Bold.ttf",
+              "./assets/fonts/LeagueSpartan-ExtraBold.ttf",
+              "./assets/fonts/LeagueSpartan-Black.ttf"
+            ]
+          }
+      ]
+  ]
+  }
+}
