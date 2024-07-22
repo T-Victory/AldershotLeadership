@@ -11,6 +11,7 @@ export default function App() {
       <Text>hello</Text>
     </View>
   );
+  
 }
 
 const styles = StyleSheet.create({
