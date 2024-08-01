@@ -1,3 +1,5 @@
+// IMPORTANT! KEEP THIS FILE AS .js, OTHERWISE PROBLEMS MAY OCCUR WHEN BUILDING AND BUNDLING FOR PROD
+
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
