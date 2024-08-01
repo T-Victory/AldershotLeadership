@@ -1,4 +1,11 @@
 export default class Group {
+    name: string;
+    dates: string;
+    location: string;
+    description: string;
+    mainContact: string;
+    secondaryContact: string;
+
     constructor(name, dates, location, description, mainContact, secondaryContact) {
         this.name = name;
         // Should be an array

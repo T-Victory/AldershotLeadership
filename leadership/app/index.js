@@ -1,8 +1,11 @@
+// IMPORTANT! KEEP THIS FILE AS .js, OTHERWISE PROBLEMS MAY OCCUR WHEN BUILDING AND BUNDLING FOR PROD
+
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import Colours from '../hooks/Colours';
 import LoadFonts from '../hooks/LoadFonts';
+import { Link } from 'expo-router';
 
 export default function App() {
   const fontsLoaded = LoadFonts();
@@ -19,6 +22,7 @@ export default function App() {
         <Text style={{ fontFamily: 'LeagueSpartan-Medium', fontSize: 21 }}>Home</Text>
         <Text style={{ fontFamily: 'Manrope-SemiBold', fontSize: 16 }}>Display</Text>
         <Text style={{ fontFamily: 'Manrope-Light', fontSize: 16, textAlign: 'center' }}>Lorem ipsum dolor sit amet consectetur adipiscing elit.</Text>
+        <Link href="/calendar">Calendar</Link>
       </View>
       <StatusBar style="auto" />
     </View>
