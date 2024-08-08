@@ -2,13 +2,16 @@
 
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Colours from '../hooks/Colours';
 import LoadFonts from '../hooks/LoadFonts';
 import { Link } from 'expo-router';
 
 import Event from '../components/Event';
-import EventView from '../components/EventView';
+import MeetingView from '../components/MeetingView';
+import GroupView from '../components/GroupView';
+
+import CustomText from '../components/react-components/CustomText';
 
 export default function App() {
   const fontsLoaded = LoadFonts();
@@ -17,32 +20,21 @@ export default function App() {
     return null;
   }
 
-
-
-  let name = "Lions Leadership";
-  const date = "10:55 - 12:00";
-  const content = "Coding team only! Bring your forms!";
-
-  const gradient1 = ['#E3F8FF', '#E8FFF8'];
-  const gradient2 = ['#F6EDFF', '#EBEDFF'];
-
-
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container} contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}>
       <View style={styles.banner} />
       <View style={styles.body}>
-        <Text style={{ fontFamily: 'LeagueSpartan-SemiBold', fontSize: 36 }}>Lions Connect</Text>
-        <Text style={{ fontFamily: 'LeagueSpartan-Medium', fontSize: 21 }}>Home</Text>
-        <Text style={{ fontFamily: 'Manrope-SemiBold', fontSize: 16 }}>Display</Text>
-        <Text style={{ fontFamily: 'Manrope-Light', fontSize: 16, textAlign: 'center' }}>Lorem ipsum dolor sit amet consectetur adipiscing elit.</Text>
-        <Link href="/calendar">Calendar</Link>
+        
+        <MeetingView name="Robotics Team" time="10:55 - 12:00" content="Coding team only! Bring your forms!" gradient={['#E3F8FF', '#E8FFF8']} />
+        <MeetingView name="Lions Leadership" time="10:55 - 12:00" content="No notes today!" gradient={['#F6EDFF', '#EBEDFF']} />
+        <MeetingView name="Sr. Girls Soccer" time="10:55 - 12:00" content="We're in the small gym today!" gradient={['#FFFBED', '#FFF4E9']} />
 
-        <EventView name="Hello" time="10:55 - 12:00" content="Coding team only! Bring your forms!" gradient={['#E3F8FF', '#E8FFF8']} />
-        <EventView name="Hello" time="10:55 - 12:00" content="Coding team only! Bring your forms!" gradient={['#E3F8FF', '#E8FFF8']} />
-        <EventView name="Hello" time="10:55 - 12:00" content="Coding team only! Bring your forms!" gradient={['#E3F8FF', '#E8FFF8']} />
+        <GroupView name="Robotics Team" dates="Everyday @ Lunch" isSubscribed='true' mainContact='Taysen Victory (1victorytay@hdsb.ca)' secondaryContact='Mr. Deane (deanepa@hdsb.ca)' description='Our club provides a platform for members to collaborate, learn, and apply STEM principles in real-world projects. From designing and constructing robots to programming and problem-solving, we cover all aspects of robotics.' />
+        <GroupView name="Sr. Girls Soccer" dates="Mon & Wed @ Lunch" mainContact='Ms. Robertson (robertsons@hdsb.ca)' secondaryContact='Taysen Victory (1victorytay@hdsb.ca)' description='Responsible for planning events and organizing school initiatives. We meet in the fishbowl every other Tuesday, we’re always looking for committed student leaders!' />
+
       </View>
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
   );
 }
 
@@ -54,10 +46,12 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   container: {
+    marginTop: 128,
+    // marginBottom: 64,
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
   body: {
     alignItems: 'center',

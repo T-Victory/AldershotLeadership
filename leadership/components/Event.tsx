@@ -1,3 +1,6 @@
+import { StyleSheet, Text, View } from 'react-native';
+
+
 export default class Event {
     name: string;
     date: string;
