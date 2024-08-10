@@ -10,6 +10,7 @@ import { Link } from 'expo-router';
 import Event from '../components/Event';
 import MeetingView from '../components/MeetingView';
 import GroupView from '../components/GroupView';
+import BannerView from '../components/BannerView';
 
 import CustomText from '../components/react-components/CustomText';
 
@@ -22,7 +23,8 @@ export default function App() {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}>
-      <View style={styles.banner} />
+      {/* <View style={styles.banner} /> */}
+      <BannerView heading="ATTENTION" content="Prom tickets need to be bought TODAY" colours={[Colours.LIME, '#60D638']}/>
       <View style={styles.body}>
         
         <MeetingView name="Robotics Team" time="10:55 - 12:00" content="Coding team only! Bring your forms!" gradient={['#E3F8FF', '#E8FFF8']} />
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
   },
   container: {
     marginTop: 128,
-    // marginBottom: 64,
+    paddingBottom: 64,
     flex: 1,
     backgroundColor: '#fff',
     // alignItems: 'center',
